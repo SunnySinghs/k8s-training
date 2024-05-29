@@ -13,7 +13,7 @@ import com.sourabh.java.springbootapp.model.Employee;
 import com.sourabh.java.springbootapp.service.EmployeeService;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/app")
 public class EmployeeRestController {
 
 	EmployeeService employeeService;
