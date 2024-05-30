@@ -24,8 +24,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public List<Employee> findAll() {		
 		List<Employee> employees = new ArrayList<>();
 		for(EmployeeEntity entity: employeeRepository.findAll()) {
-			System.out.println(entity);
 			Employee employee = new Employee();
+			employee.setId(entity.getId());
 			employee.setEmail(entity.getEmail());
 			employee.setName(entity.getName());
 			employees.add(employee);
@@ -42,6 +42,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		
 		if(result.isPresent()) {
 			entity = result.get();
+			employee.setId(entity.getId());
 			employee.setEmail(entity.getEmail());
 			employee.setName(entity.getName());
 		}else {
@@ -56,6 +57,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public void save(Employee employee) {
 		System.out.println(employee);
 		EmployeeEntity entity = new EmployeeEntity();
+		entity.setId(employee.getId());
 		entity.setEmail(employee.getEmail());
 		entity.setName(employee.getName());
 		employeeRepository.save(entity);

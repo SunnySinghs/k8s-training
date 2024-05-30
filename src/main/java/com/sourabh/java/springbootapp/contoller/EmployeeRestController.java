@@ -41,9 +41,7 @@ public class EmployeeRestController {
 	
 	@RequestMapping(path = "/employees", method = RequestMethod.POST)
 	public Employee save(@RequestBody Employee employee){
-		
 		employeeService.save(employee);
-		
 		return employee;
 	}
 	
@@ -51,14 +49,13 @@ public class EmployeeRestController {
 	@RequestMapping(path = "/employees", method = RequestMethod.PUT)
 	public Employee saveOrUpdate(@RequestBody Employee employee){
 		employeeService.save(employee);
-		
 		return employee;
 	}
 	
 	@RequestMapping(path = "/employees/{id}", method = RequestMethod.DELETE)
 	public String deleteById(@PathVariable int id){
 		employeeService.deleteById(id);
-		return "Deleted EmployeeId is:"+id;
+		return "Deleted EmployeeId is: "+id;
 	}
 	
 	@RequestMapping("/load/{id}")
