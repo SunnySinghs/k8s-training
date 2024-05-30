@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: springboot-app
-        image: sourabhsingh/sprint-boot-app
+        image: sourabhsingh/spring-boot-app
         resources:
           requests:
             cpu: "200m"
