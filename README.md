@@ -54,13 +54,13 @@ docker login
 docker push <your-username>/sprint-boot-app
 ````
 
-### 4. Docker Hub Image URL
+Docker Hub Image URL
 
 ```
 https://hub.docker.com/repository/docker/sourabhsingh/sprint-boot-app/general
 ```
 
-### 5. Create Kubernetes Configurations
+### 4. Create Kubernetes Configurations
 
 Create a k8s directory and add the following Kubernetes YAML configuration files:
 
@@ -91,7 +91,7 @@ Delete the MySQL client pod
 kubectl delete pod mysql-client
 ```
 
-### 6. Deploy to Kubernetes
+### 5. Deploy to Kubernetes
 
 Apply the configurations in the correct order using `kubectl apply`.
 
@@ -103,7 +103,7 @@ kubectl apply -f k8s/mysql-headless-service.yaml
 kubectl apply -f k8s/webapp-deployment.yaml
 ```
 
-### 7. Access the Application
+### 6. Access the Application
 
 Retrieve the external IP of the Spring Boot service and open a web browser to access your application.
 
@@ -111,7 +111,7 @@ Retrieve the external IP of the Spring Boot service and open a web browser to ac
 kubectl get services springboot-app-service
 ```
 
-### 8. Application APIs
+### 7. Application APIs
 
 Spring Boot application APIs curl
 
