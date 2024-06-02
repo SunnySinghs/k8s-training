@@ -57,7 +57,7 @@ docker push <your-username>/sprint-boot-app
 Docker Hub Image URL
 
 ```
-https://hub.docker.com/repository/docker/sourabhsingh/sprint-boot-app/general
+https://hub.docker.com/repository/docker/sourabhsingh/spring-boot-app/general
 ```
 
 ### 4. Create Kubernetes Configurations
