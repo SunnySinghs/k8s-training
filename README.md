@@ -14,7 +14,7 @@ This repository contains a simple Spring Boot application configured to use MySQ
 The deployment includes the following components:
 - A MySQL database
 - A Spring Boot application
-- Kubernetes Services and Deployments for both
+- Kubernetes Services and Deployments
 
 ## Setup and Deployment
 
