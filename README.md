@@ -160,7 +160,7 @@ curl --location --request GET 'http://<External IP>:8080/app/load/{id}'
 This URL is accessible to limited audience
 
 ```
-https://github.com/SunnySinghs/k8s-training
+https://nagarro-my.sharepoint.com/:v:/p/sourabh_singh/ESnaZm11tadHvzYSHFKHFYQBtQkKxk7vHFlidaZ9wVLG5g?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=smbQFe
 ```
 
 ## Cleaning Up
