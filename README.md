@@ -73,6 +73,18 @@ Create a k8s directory and add the following Kubernetes YAML configuration files
 7. **LoadBalancer Service**: This service will expose the Spring Boot application to external traffic, allowing users to access the application from outside the cluster.
 8. **Horizontal Pod Autoscaler(HPA)**: This configuration automatically enables the Spring Boot application to scale in response to varying loads, ensuring optimal performance and resource usage.
 
+### 5. Deploy to Kubernetes
+
+Apply the configurations in the correct order using `kubectl apply`.
+
+```
+kubectl apply -f k8s/mysql-secret.yaml
+kubectl apply -f k8s/mysql-configmap.yaml
+kubectl apply -f k8s/mysql-statefulset.yaml
+kubectl apply -f k8s/mysql-headless-service.yaml
+kubectl apply -f k8s/webapp-deployment.yaml
+```
+
 Use the command below to create a pod with the MySQL client, which will allow you to connect to the deployed database:
 
 ```
@@ -89,18 +101,6 @@ Delete the MySQL client pod
 
 ```
 kubectl delete pod mysql-client
-```
-
-### 5. Deploy to Kubernetes
-
-Apply the configurations in the correct order using `kubectl apply`.
-
-```
-kubectl apply -f k8s/mysql-secret.yaml
-kubectl apply -f k8s/mysql-configmap.yaml
-kubectl apply -f k8s/mysql-statefulset.yaml
-kubectl apply -f k8s/mysql-headless-service.yaml
-kubectl apply -f k8s/webapp-deployment.yaml
 ```
 
 ### 6. Access the Application
