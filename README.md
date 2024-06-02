@@ -57,7 +57,7 @@ docker push <your-username>/sprint-boot-app
 Docker Hub Image URL
 
 ```
-https://hub.docker.com/repository/docker/sourabhsingh/sprint-boot-app/general
+https://hub.docker.com/repository/docker/sourabhsingh/spring-boot-app/general
 ```
 
 ### 4. Create Kubernetes Configurations
@@ -121,6 +121,7 @@ Spring Boot application APIs curl
 curl --location --request POST 'http://<External IP>:8080/app/employees' \
 --header 'Content-Type: application/json' \
 --data-raw '{
+    "id": 1,
     "name": "Sam",
     "email": "sam.sam@gmail.com"
 }'
@@ -138,6 +139,7 @@ curl --location --request GET 'http://<External IP>:8080/app/employees'
 curl --location --request PUT 'http://<External IP>:8080/app/employees' \
 --header 'Content-Type: application/json' \
 --data-raw '{
+    "id": 2,
     "name": "Emma",
     "email": "emma.emma@gmail.com"
 }'
