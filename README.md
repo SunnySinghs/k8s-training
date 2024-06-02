@@ -82,7 +82,6 @@ kubectl apply -f k8s/mysql-secret.yaml
 kubectl apply -f k8s/mysql-configmap.yaml
 kubectl apply -f k8s/mysql-statefulset.yaml
 kubectl apply -f k8s/mysql-headless-service.yaml
-kubectl apply -f k8s/webapp-deployment.yaml
 ```
 
 Use the command below to create a pod with the MySQL client, which will allow you to connect to the deployed database:
@@ -97,10 +96,10 @@ After connecting to the database, run the following query to create a database:
 Create database employee;
 ```
 
-Delete the MySQL client pod
+Deploy the Spring boot app
 
 ```
-kubectl delete pod mysql-client
+kubectl apply -f k8s/webapp-deployment.yaml
 ```
 
 ### 6. Access the Application
